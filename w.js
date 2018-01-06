@@ -1,19 +1,43 @@
 var ans = new Array(2);
 ans[0] =new Array(50);
 ans[1] =new Array(50);
+var cans = new Array(2);
+cans[0] =new Array(50);
+cans[1] =new Array(50);
 var anseng = [];
 var qsci = [];
 var csci = [];
+var checked =0;
 var currentno=1;
 var currentsubj=0;
 for(i=0;i<50;i++){ans[0][i]=0;ans[1][i]=0;}
+for(i=0;i<50;i++){cans[0][i]=1;cans[1][i]=1;}
 for(i=0;i<50;i++){qsci.push(i);csci.push([i+1,i+2,i+3,i+4]);}
 loadd();
+function Close(){
 
-function check(){
+document.getElementById("scorepanel").style.display = "none";
+  
+}
+function check(x){
+  
   var ch=0;
   for(i=0;i<50;i++){if(ans[0][i]==0||ans[1][i]==0)ch=1;}
-if(ch==1)alert("ยังตอบคำถามไม่ครบ");
+//if(ch==1&&x==0)alert("ยังตอบคำถามไม่ครบ");
+  //else{
+    var score1=0,score2=0;
+    for(i=0;i<50;i++){if(ans[0][i]==cans[0][i])score1++;
+                         if(ans[1][i]==cans[1][i])score2++;}
+    document.getElementById("scoredisp").innerHTML="วิทยาศาสตร์ "+score1+"/50<br>ภาษาอังกฤษ "+score2+"/50";
+  document.getElementById("scorepanel").style.display = "block";
+  document.getElementById("time").style.display = "none";
+  document.getElementById("sent").style.display = "none";
+    document.getElementById("choice").style.display = "none";
+   document.getElementById("reason").style.display = "block";
+  checked=1;
+  cno(1);
+  //}
+  
 }
 function choose(x){
 ans[currentsubj][currentno-1]=x;
@@ -28,8 +52,15 @@ function cno(x){
   currentno=x;
   for(j=1;j<=4;j++)document.getElementById("c"+j).checked=false;
   if(ans[currentsubj][x-1]>0){document.getElementById("c"+ans[currentsubj][x-1]).checked=true;}
-    csubj(currentsubj,0);  document.getElementById("no"+x).style.fontWeight="bold";
-  }
+  csubj(currentsubj,0); document.getElementById("no"+x).style.backgroundColor = "#ffaac2";
+  if(ans[currentsubj][currentno-1]!=cans[currentsubj][currentno-1]&&checked==1){
+    document.getElementById("no"+x).style.backgroundColor = "#ff72aa";
+    document.getElementById("yourans").style.display="block";}
+  else if(checked==1){document.getElementById("yourans").style.display="none";
+       document.getElementById("no"+x).style.backgroundColor = "#82ff8c";
+       }
+
+}
 
 
 function csubj(x,y){
@@ -38,18 +69,25 @@ function csubj(x,y){
     while(div.firstChild)
     div.removeChild(div.firstChild);
   document.getElementById("sbtn0").style.fontWeight="normal";
- document.getElementById("sbtn1").style.fontWeight="normal";
-   document.getElementById("sbtn"+currentsubj).style.fontWeight="bold";
+
   
+  
+ document.getElementById("sbtn1").style.fontWeight="normal";
+  document.getElementById("sbtn0").style.textDecoration= "none";
+  document.getElementById("sbtn1").style.textDecoration= "none";document.getElementById("sbtn"+currentsubj).style.fontWeight="bold";
+document.getElementById("sbtn"+currentsubj).style.textDecoration= "underline"; 
     for(i=1;i<=50;i++){    
       var btn = document.createElement("BUTTON");
     var t = document.createTextNode(String(i));      
     btn.appendChild(t);
     btn.style.width="4vw";
     btn.style.backgroundColor="rgba(255, 255, 255, 0.8)";
-      if(ans[currentsubj][i-1]!=0) btn.style.color="#00d839";
-   
-    btn.style.borderColor="Transparent"
+      if(ans[currentsubj][i-1]!=0&&checked==0) btn.style.color="#00d839";
+      if(checked==1){
+        if(ans[currentsubj][i-1]==cans[currentsubj][i-1]){btn.style.backgroundColor="#00d839";}
+        else{btn.style.backgroundColor="#f44289";}
+      }
+    btn.style.borderColor="Transparent";
     btn.id="no"+i;
    btn.onclick =
     (function() {
@@ -90,6 +128,8 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
+    alert("หมดเวลาทำข้อสอบแล้ว");
+    check(1);
     //document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
