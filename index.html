@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+
+<html>
+ <head>
+<title>Naniyori</title>
+<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+   
+<link rel="stylesheet" href="styleN.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+     
+
+  </head>
+<body>
+  <button class="nextbt" id="sent" onclick="check()">ตรวจคำตอบ</button>
+  <p id="time" class="timecountdown"></p>
+
+
+  <div class="subject">
+    <button class="subjbtn" onclick="csubj(0,1)" id="sbtn0">วิทยาศาสตร์</button>
+    <button class="subjbtn" id="sbtn1" onclick="csubj(1,1)">ภาษาอังกฤษ</button>
+  </div>
+  <div id="no"></div>
+  <div class="typ">
+    <p id=question>1 + 1 มีค่าเท่าใด</p>
+    <form action="">
+  <input type="radio" name="type" id="c1" onclick = "choose(1)"> 2<br>
+  <input type="radio" name="type" id="c2"onclick = "choose(2)"> 4<br>
+  <input type="radio" name="type" id="c3"onclick = "choose(3)"> 6<br>
+  <input type="radio" name="type" id="c4"onclick = "choose(4)"> 8<br>
+    </form>
+    
+  </div>
+  <button class="nextbt" onclick = "next()" id="nextbtn">ข้อถัดไป ></button>
+
+</body>
+</html>
