@@ -13,7 +13,14 @@
 
   </head>
 <body onload="loadd()">
-  <button class="nextbt" id="sent" onclick="check()">ตรวจคำตอบ</button>
+  <div id="scorepanel" class="scorep">
+  <div class="scoredis" >
+    <button class="sclose"  onclick="Close()">X</button>
+    คะแนนที่ได้
+    <p id="scoredisp"></p>
+  </div>
+  </div>
+  <button class="nextbt" id="sent" onclick="check(0)">ตรวจคำตอบ</button>
   <p id="time" class="timecountdown"></p>
 
 
@@ -23,14 +30,15 @@
   </div>
   <div id="no"></div>
   <div class="typ">
-    <p id=question>1 + 1 มีค่าเท่าใด</p>
-    <form action="">
-  <input type="radio" name="type" id="c1" onclick = "choose(1)"> 2<br>
-  <input type="radio" name="type" id="c2"onclick = "choose(2)"> 4<br>
-  <input type="radio" name="type" id="c3"onclick = "choose(3)"> 6<br>
-  <input type="radio" name="type" id="c4"onclick = "choose(4)"> 8<br>
+    <p id=question>กุ้งกิ้งกุ้งกิ้ง~ มีกระดิ่งทั้งหมดกี่ลูก</p>
+    <form action="" id="choice">
+  <input type="radio" name="type" id="c1" onclick = "choose(1)"> 1<br>
+  <input type="radio" name="type" id="c2"onclick = "choose(2)"> 3<br>
+  <input type="radio" name="type" id="c3"onclick = "choose(3)"> 5<br>
+  <input type="radio" name="type" id="c4"onclick = "choose(4)"> 7<br><br>
     </form>
-    
+    <p style="display:none" id="yourans">คำตอบของคุณคือ asdf</p>
+    <p style="display:none" id="reason">คำตอบที่ถูกต้องคือ 1 เพราะอยากตอบเย่ะะะ</p>
   </div>
   <button class="nextbt" onclick = "next()" id="nextbtn">ข้อถัดไป ></button>
 
