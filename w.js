@@ -8,8 +8,8 @@ var currentno=1;
 var currentsubj=0;
 for(i=0;i<50;i++){ans[0][i]=0;ans[1][i]=0;}
 for(i=0;i<50;i++){qsci.push(i);csci.push([i+1,i+2,i+3,i+4]);}
+loadd();
 
-csubj(0,1);
 function check(){
   var ch=0;
   for(i=0;i<50;i++){if(ans[0][i]==0||ans[1][i]==0)ch=1;}
@@ -63,7 +63,9 @@ function csubj(x,y){
  if(y==1)cno(1);
 }
 
-
+function loadd(){
+  
+  csubj(0,1);
 var countDownDate = new Date().getTime();
 countDownDate+=(2.5*60*60*1000);
 // Update the count down every 1 second
@@ -91,15 +93,12 @@ var x = setInterval(function() {
     //document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-
-
-
 /**
     * Disable right-click of mouse, F12 key, and save key combinations on page
     * By Arthur Gareginyan (arthurgareginyan@gmail.com)
     * For full source code, visit http://www.mycyberuniverse.com
     */
-  window.onload = function() {
+  
     document.addEventListener("contextmenu", function(e){
       e.preventDefault();
     }, false);
@@ -135,4 +134,7 @@ var x = setInterval(function() {
       e.preventDefault();
       return false;
     }
-  };
+}
+
+
+  
