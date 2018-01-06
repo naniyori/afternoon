@@ -12,6 +12,13 @@ for(i=1;i<=50;i++){
 q[0][i-1]="โจทย์วิทย์ข้อที่"+i;
 q[1][i-1]="โจทย์อิ้งข้อที่"+i;
 }
+var dreason= Array(2);
+dreason[0]=new Array(50);
+dreason[1]=new Array(50);
+for(i=1;i<=50;i++){
+dreason[0][i-1]="เนืีองจากวิทย์"+i;
+  dreason[1][i-1]="เนืีองจากอิ้ง"+i;
+}
 var choi=new Array(2);
 choi[0]=new Array(50);
 choi[1]=new Array(50);
@@ -67,16 +74,20 @@ function cno(x){
   if(x==50)document.getElementById("nextbtn").style.visibility="hidden";
  else document.getElementById("nextbtn").style.visibility="visible";
   currentno=x;
-  for(j=1;j<=4;j++)document.getElementById("c"+j).checked=false;
-  if(ans[currentsubj][x-1]>0){document.getElementById("c"+ans[currentsubj][x-1]).checked=true;}
+  for(j=1;j<=4;j++)document.getElementById("cbt"+j).checked=false;
+  if(ans[currentsubj][x-1]>0){document.getElementById("cbt"+ans[currentsubj][x-1]).checked=true;}
   csubj(currentsubj,0); document.getElementById("no"+x).style.backgroundColor = "#ffaac2";
   if(ans[currentsubj][currentno-1]!=cans[currentsubj][currentno-1]&&checked==1){
     document.getElementById("no"+x).style.backgroundColor = "#ff72aa";
-    document.getElementById("yourans").style.display="block";}
+    document.getElementById("yourans").style.display="block";
+    if(ans[currentsubj][currentno-1]==0)document.getElementById("yourans").innerHTML="<คุณไม่ได้ตอบคำถามนี้>";
+    else document.getElementById("yourans").innerHTML="<คำตอบของคุณคือ "+choi[currentsubj][x-1][ans[currentsubj][x-1]-1]+">";
+
+  }
   else if(checked==1){document.getElementById("yourans").style.display="none";
        document.getElementById("no"+x).style.backgroundColor = "#82ff8c";
        }
-    
+    document.getElementById("reason").innerHTML="คำตอบที่ถูกคือ "+choi[currentsubj][x-1][cans[currentsubj][x-1]-1]+"<br>"+dreason[currentsubj][x-1];
     document.getElementById("question").innerHTML=q[currentsubj][x-1];
     document.getElementById("c1").innerHTML=choi[currentsubj][x-1][0];
    document.getElementById("c2").innerHTML=choi[currentsubj][x-1][1];
@@ -198,13 +209,8 @@ var x = setInterval(function() {
       return false;
     }
 }
-var myEvent = window.attachEvent || window.addEventListener;
-var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compitable
-
-            myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
-                var confirmationMessage = 'ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ';  // a space
-                (e || window.event).returnValue = confirmationMessage;
-                return confirmationMessage;
-            });
+window.onbeforeunload = function() {
+  return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
+};
 
   
