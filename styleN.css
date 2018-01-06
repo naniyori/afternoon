@@ -76,6 +76,22 @@ body {
   z-index:2;
   
 }
+.rotate{
+  position :absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   display:none;
+  color:white;
+  text-align:center;
+  padding :40% 0 0 0;
+  font-size:40px;
+  background-color:black;
+  z-index:2; 
+}
 .scoredis{
   font-size:40px;
   position : absolute;
@@ -92,6 +108,9 @@ body {
 .inputa{
     width: 70px;
 }
+  .rotate{
+    display:block;
+  }
 .v{
 	
   margin-top:10px;
