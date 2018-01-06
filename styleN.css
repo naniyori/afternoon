@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+
+html {
+ 
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  background-image: url("http://www.mx7.com/i/06e/BOcVIq.jpg");
+  margin: 0;
+  padding: 0; }
+
+*{   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+ font-family:"Sukhumvit Set","Prompt", sans-serif;}
+.nextbt{
+  margin : 3px 0 0 0;
+  background-color:rgba(255, 255, 255, 0.8);
+  border-color: Transparent;
+  font-size:20px;
+  position :absolute;
+  right:20px;
+}
+.subjbtn{
+    width : 50vw;
+    font-size:30px;
+    text-align:center;
+    background-color: Transparent;
+    border:Transparent;    
+    float:left;
+}
+.subject{
+    height :45px; 
+    background-color:rgba(255, 255, 255, 0.8);
+}
+.timecountdown{  padding:0% 2% 0% 2%;
+  margin:10px 30vw 10px 30vw;
+	text-align: center;
+  font-weight:300;
+  font-size:30px;
+  background-color:rgba(255, 255, 255, 0.8);}
+
+.typ{
+  padding:1% 4% 4% 4%;
+  margin:10vh 20px 20px 20px;
+  text-align:left;
+  font-size:20px;
+  background-color:rgba(255, 255, 255, 0.8);
+
+}
+
+
+@media screen and (max-width : 700px ){
+.inputa{
+    width: 70px;
+}
+.v{
+	
+  margin-top:10px;
+}
+.typ{
+  
+	padding:0% 8% 0% 8%;
+     font-size:15px;
+	}
+}
