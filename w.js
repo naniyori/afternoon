@@ -198,8 +198,8 @@ var x = setInterval(function() {
       return false;
     }
 }
-window.onbeforeunload = function() {
-  alert("ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ");
+window.onbeforeunload = function(e) {
+    return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
 };
 
   
