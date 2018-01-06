@@ -48,14 +48,45 @@ body {
   background-color:rgba(255, 255, 255, 0.8);}
 
 .typ{
-  padding:1% 4% 4% 4%;
+  padding:1% 4% 1% 4%;
   margin:10vh 20px 20px 20px;
   text-align:left;
   font-size:20px;
   background-color:rgba(255, 255, 255, 0.8);
 
 }
+.sclose{
+  position :absolute;
+  right:0px;
+  top:0px;
+  background-color:Transparent;
+  border-color:Transparent;
+  
+}
+.scorep{
+  position :absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  display:none;
+  background-color:rgba(0,0,0,0.5);
+  z-index:2;
+  
+}
+.scoredis{
+  font-size:40px;
+  position : absolute;
+  padding : 5% 0 0 0;
+  margin :10vh 0 0 10vw;
+  width : 80vw;
+  height :70vh;
+  background-color:white;
+  text-align : center;  
 
+}
 
 @media screen and (max-width : 700px ){
 .inputa{
