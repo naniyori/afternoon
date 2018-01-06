@@ -198,8 +198,13 @@ var x = setInterval(function() {
       return false;
     }
 }
-window.onbeforeunload = function(e) {
-    return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
-};
+var myEvent = window.attachEvent || window.addEventListener;
+var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compitable
+
+            myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
+                var confirmationMessage = 'ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ';  // a space
+                (e || window.event).returnValue = confirmationMessage;
+                return confirmationMessage;
+            });
 
   
