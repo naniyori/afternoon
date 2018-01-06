@@ -5,8 +5,24 @@ var cans = new Array(2);
 cans[0] =new Array(50);
 cans[1] =new Array(50);
 var anseng = [];
-var qsci = [];
-var csci = [];
+var q =new Array(2);
+q[0]=new Array(50);
+q[1]=new Array(50);
+for(i=1;i<=50;i++){
+q[0][i-1]="โจทย์วิทย์ข้อที่"+i;
+q[1][i-1]="โจทย์อิ้งข้อที่"+i;
+}
+var choi=new Array(2);
+choi[0]=new Array(50);
+choi[1]=new Array(50);
+for(i=1;i<=50;i++){
+choi[0][i-1]=new Array(4);
+choi[1][i-1]=new Array(4);
+  for(j=1;j<=4;j++){
+  choi[0][i-1][j-1]="ช้อยวิทย์ข้อ"+i+"ช้อย"+j;
+  choi[1][i-1][j-1]="ช้อยอิ้งข้อ"+i+"ช้อย"+j;
+  }
+}
 var checked =0;
 var currentno=1;
 var currentsubj=0;
@@ -29,6 +45,7 @@ function check(x){
     for(i=0;i<50;i++){if(ans[0][i]==cans[0][i])score1++;
                          if(ans[1][i]==cans[1][i])score2++;}
     document.getElementById("scoredisp").innerHTML="วิทยาศาสตร์ "+score1+"/50<br>ภาษาอังกฤษ "+score2+"/50";
+  
   document.getElementById("scorepanel").style.display = "block";
   document.getElementById("time").style.display = "none";
   document.getElementById("sent").style.display = "none";
@@ -59,7 +76,13 @@ function cno(x){
   else if(checked==1){document.getElementById("yourans").style.display="none";
        document.getElementById("no"+x).style.backgroundColor = "#82ff8c";
        }
-
+    
+    document.getElementById("question").innerHTML=q[currentsubj][x-1];
+    document.getElementById("c1").innerHTML=choi[currentsubj][x-1][0];
+   document.getElementById("c2").innerHTML=choi[currentsubj][x-1][1];
+  document.getElementById("c3").innerHTML=choi[currentsubj][x-1][2];
+  document.getElementById("c4").innerHTML=choi[currentsubj][x-1][3];
+  
 }
 
 
