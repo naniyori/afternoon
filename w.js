@@ -176,7 +176,7 @@ var x = setInterval(function() {
     }
 }
 window.onbeforeunload = function() {
-  return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
+  alert("ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ");
 };
 
   
