@@ -55,6 +55,65 @@ cans[0][0]=3;
 cans[0][1]=2;
 cans[0][2]=2;
 for(i=0;i<50;i++){qsci.push(i);csci.push([i+1,i+2,i+3,i+4]);}
+
+//โจทย์อิ้งยัดตรงนี้
+q[1][0]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>1. From the information given in the passage, we know that Marie Gilles_________."
+choi[1][0][0]="            a. knew the owner of the gallery"
+choi[1][0][1]="            b. had been married"
+choi[1][0][2]="            c. was grateful to the police"
+choi[1][0][3]="            d. did not value the painting highly"
+q[1][1]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>2. The owner of the art gallery said that he bought the painting____."
+choi[1][1][0]="            a. because he was related to the artist"
+choi[1][1][1]="            b. because he knew the woman in the painting"
+choi[1][1][2]="            c. not knowing its true value"
+choi[1][1][3]="            d. not knowing it had been stolen"
+q[1][2]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>3. The young woman in the painting was______."
+choi[1][2][0]="             a. an unknown person"
+choi[1][2][1]="             b. an ancestor of Marie Gilles"
+choi[1][2][2]="             c. about to get married"
+choi[1][2][3]="             d.Marie Gilles as a young woman"
+q[1][3]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>4. The passage tell us that the painting is______."
+choi[1][3][0]="            a. very famous                  "
+choi[1][3][1]="                       b. a portrait"
+choi[1][3][2]="            c. very valuable                 "
+choi[1][3][3]="                       d. an oil painting"
+q[1][4]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>5. The word “ancestor” in passage means"
+choi[1][4][0]="            a. heir                                 "
+choi[1][4][1]="                        b. child"
+choi[1][4][2]="            c. forefather                         "
+choi[1][4][3]="                     d. toddler"
+q[1][5]="Use the context clues and choose the correct meaning of the word in boldface<br>6.Computer manuals are often very hard to understand, so I was surprised to discover how lucid this one is."
+choi[1][5][0]="a.     Long                                                    "
+choi[1][5][1]="b. clear"
+choi[1][5][2]="c. new "
+choi[1][5][3]="d. expensive"
+q[1][6]="Use the context clues and choose the correct meaning of the word in boldface<br>7. The chinese government provides incentives for married couples to have only one child. For example, couples with one child get financial help and free medical care."
+choi[1][6][0]="a. warnings                                              "
+choi[1][6][1]=" b. suggestions"
+choi[1][6][2]="c. penalties                                               "
+choi[1][6][3]="d. encouragements"
+q[1][7]="Use the context clues and choose the correct meaning of the word in boldface<br>8. The store detective faced the dilemma of either having an elderly, needy man arrested or ignoring store rules about shoplifters."
+choi[1][7][0]="           a. proof                                                    "
+choi[1][7][1]=" b. reason"
+choi[1][7][2]="           c. memory                                             "
+choi[1][7][3]="   d. difficult choice"
+q[1][8]="Use the context clues and choose the correct meaning of the word in boldface<br>9. The press assailed the mayor for giving large city construction jobs to his daughter’s firm."
+choi[1][8][0]="           a. attacked                 "
+choi[1][8][1]="                               b. praised"
+choi[1][8][2]="           c. fined                                "
+choi[1][8][3]="                       d. paid"
+q[1][9]="Use the context clues and choose the correct meaning of the word in boldface<br>10.Reliable scientific theories are based not upon careless work, but rather upon meticulous research and experimentation."
+choi[1][9][0]="            a. hasty                                                "
+choi[1][9][1]="      b. expensive"
+choi[1][9][2]="            c. careful                            "
+choi[1][9][3]="                        d. complicated"
+
+
+
+
+
+
+
 loadd();
 function Close(){
 
