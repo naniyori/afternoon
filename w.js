@@ -74,7 +74,7 @@ function prev(){
   cno(currentno-1);
 }
 function cno(x){
-  if(x==0)document.getElementById("prevbtn").style.visibility="hidden";
+  if(x==1)document.getElementById("prevbtn").style.visibility="hidden";
  else document.getElementById("prevbtn").style.visibility="visible";
   if(x==50)document.getElementById("nextbtn").style.visibility="hidden";
  else document.getElementById("nextbtn").style.visibility="visible";
