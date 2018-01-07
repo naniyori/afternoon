@@ -70,6 +70,9 @@ ans[currentsubj][currentno-1]=x;
 function next(){
 cno(currentno+1);
 }
+function prev(){
+  cno(currentno-1);
+}
 function cno(x){
   
   if(x==50)document.getElementById("nextbtn").style.visibility="hidden";
