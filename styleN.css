@@ -94,7 +94,7 @@ body {
    display:none;
   color:white;
   text-align:center;
-  padding :40% 0 0 0;
+  vertical-align: middle;
   font-size:40px;
   background-color:black;
   z-index:2; 
