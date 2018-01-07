@@ -28,24 +28,11 @@ choi[1]=new Array(50);
 for(i=1;i<=50;i++){
 choi[0][i-1]=new Array(4);
 choi[1][i-1]=new Array(4);
-  for(j=1;j<=4;j++){
+  /*for(j=1;j<=4;j++){
   choi[0][i-1][j-1]="ช้อยวิทย์ข้อ"+i+"ช้อย"+j;
   choi[1][i-1][j-1]="ช้อยอิ้งข้อ"+i+"ช้อย"+j;
-  }
-}
-var checked =0;
-var currentno=1;
-var currentsubj=0;
-for(i=0;i<50;i++){ans[0][i]=0;ans[1][i]=0;}
-for(i=0;i<50;i++){cans[0][i]=1;cans[1][i]=1;}
-for(i=0;i<50;i++){qsci.push(i);csci.push([i+1,i+2,i+3,i+4]);}
-loadd();
-function Close(){
-
-document.getElementById("scorepanel").style.display = "none";
-  
-}
-choi[0][0][0]="Phloem";
+  }*/
+  choi[0][0][0]="Phloem";
 choi[0][0][1]="Epidermis";
 choi[0][0][2]="Xylem";
 choi[0][0][3]="Meristem";
@@ -57,9 +44,24 @@ choi[0][2][0]="60 เมตร";
 choi[0][2][1]="120 เมตร";
 choi[0][2][2]="240 เมตร";
 choi[0][2][3]="360 เมตร";
+}
+var checked =0;
+var currentno=1;
+var currentsubj=0;
+for(i=0;i<50;i++){ans[0][i]=0;ans[1][i]=0;}
+//for(i=0;i<50;i++){cans[0][i]=1;cans[1][i]=1;}
 cans[0][0]=3;
 cans[0][1]=2;
 cans[0][2]=2;
+for(i=0;i<50;i++){qsci.push(i);csci.push([i+1,i+2,i+3,i+4]);}
+loadd();
+function Close(){
+
+document.getElementById("scorepanel").style.display = "none";
+  
+}
+
+
 function check(x){
   
   var ch=0;
