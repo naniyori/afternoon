@@ -139,9 +139,9 @@ document.getElementById("sbtn"+currentsubj).style.textDecoration= "underline";
       var btn = document.createElement("BUTTON");
     var t = document.createTextNode(String(i));      
     btn.appendChild(t);
-    btn.style.width="4vw";
+    btn.style.width="4%";
     btn.style.backgroundColor="rgba(255, 255, 255, 0.8)";
-      if(ans[currentsubj][i-1]!=0&&checked==0) btn.style.color="#00d839";
+      if(ans[currentsubj][i-1]!=0&&checked==0) btn.style.backgroundColor="#00d839";
       if(checked==1){
         if(ans[currentsubj][i-1]==cans[currentsubj][i-1]){btn.style.backgroundColor="#00d839";}
         else{btn.style.backgroundColor="#f44289";}
