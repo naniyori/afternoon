@@ -54,7 +54,6 @@ for(i=0;i<50;i++){ans[0][i]=0;ans[1][i]=0;}
 cans[0][0]=3;
 cans[0][1]=2;
 cans[0][2]=2;
-for(i=0;i<50;i++){qsci.push(i);csci.push([i+1,i+2,i+3,i+4]);}
 
 //โจทย์อิ้งยัดตรงนี้
 q[1][0]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>1. From the information given in the passage, we know that Marie Gilles_________.";
