@@ -308,7 +308,7 @@ choi[1][49][0]=" a. sleepiness";
 choi[1][49][1]=" b. drunkenness";
 choi[1][49][2]=" c. nervousness";
 choi[1][49][3]=" d. sadness";
-cans[1][0]=1;
+
 
 
 
@@ -477,4 +477,4 @@ window.onbeforeunload = function() {
 };
 
 
-                   n. ความประหม่า<br>d. sadness                            n. ความโศกเศร้า";
+              
