@@ -213,9 +213,7 @@ var x = setInterval(function() {
       return false;
     }
 }
-window.onbeforeunload = function() {
-  return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
-};
+
 
 //โจทย์วิทย์ q[0][i] : 0<=i<=49
 
@@ -242,3 +240,7 @@ choi[0][2][3]="360 เมตร";
 cans[0][0]=3;
 cans[0][1]=2;
 cans[0][2]=2;
+
+window.onbeforeunload = function() {
+  return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
+};
