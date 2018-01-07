@@ -32,7 +32,9 @@ choi[1][i-1]=new Array(4);
   choi[0][i-1][j-1]="ช้อยวิทย์ข้อ"+i+"ช้อย"+j;
   choi[1][i-1][j-1]="ช้อยอิ้งข้อ"+i+"ช้อย"+j;
   }*/
-  choi[0][0][0]="Phloem";
+  
+}
+choi[0][0][0]="Phloem";
 choi[0][0][1]="Epidermis";
 choi[0][0][2]="Xylem";
 choi[0][0][3]="Meristem";
@@ -44,7 +46,6 @@ choi[0][2][0]="60 เมตร";
 choi[0][2][1]="120 เมตร";
 choi[0][2][2]="240 เมตร";
 choi[0][2][3]="360 เมตร";
-}
 var checked =0;
 var currentno=1;
 var currentsubj=0;
