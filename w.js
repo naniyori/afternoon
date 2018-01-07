@@ -1,6 +1,7 @@
 var ans = new Array(2);
 ans[0] =new Array(50);
 ans[1] =new Array(50);
+for(i=0;i<50;i++){ans[0][i]=0;ans[1][i]=0;}
 var cans = new Array(2);
 cans[0] =new Array(50);
 cans[1] =new Array(50);
@@ -8,32 +9,17 @@ var anseng = [];
 var q =new Array(2);
 q[0]=new Array(50);
 q[1]=new Array(50);
-for(i=1;i<=50;i++){
-q[0][i-1]="โจทย์วิทย์ข้อที่"+i;
-q[1][i-1]="โจทย์อิ้งข้อที่"+i;
-}
+
 q[0][0]="เนื้อเยื่อของพืชในข้อใดเป็นเซลล์ที่ตายแล้ว";
 q[0][1]="สารในข้อใดที่โดยทั่วไปจะไม่พบในผนังเซลล์ของพืช <br> ก) Pectin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ข) Suberin <br> ค) Cutin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ง) Lignin";
 q[0][2]="A กับ B วิ่งออกกำลังกายจากจุดจุดหนึ่งด้วยอัตราเร็วสม่ำเสมอ 4 เมตรต่อวินาทีและ 6 เมตรต่อวินาทีตามลำดับ <br> เมื่อเวลาผ่านไป 60 วินาที A กับ B จะอยู่ห่างกันกี่เมตร";
 var dreason= Array(2);
 dreason[0]=new Array(50);
 dreason[1]=new Array(50);
-for(i=1;i<=50;i++){
-dreason[0][i-1]="เนื่องจากวิทย์"+i;
-  dreason[1][i-1]="เนื่องจากอิ้ง"+i;
-}
 var choi=new Array(2);
 choi[0]=new Array(50);
 choi[1]=new Array(50);
-for(i=1;i<=50;i++){
-choi[0][i-1]=new Array(4);
-choi[1][i-1]=new Array(4);
-  /*for(j=1;j<=4;j++){
-  choi[0][i-1][j-1]="ช้อยวิทย์ข้อ"+i+"ช้อย"+j;
-  choi[1][i-1][j-1]="ช้อยอิ้งข้อ"+i+"ช้อย"+j;
-  }*/
-  
-}
+
 choi[0][0][0]="Phloem";
 choi[0][0][1]="Epidermis";
 choi[0][0][2]="Xylem";
@@ -49,8 +35,8 @@ choi[0][2][3]="360 เมตร";
 var checked =0;
 var currentno=1;
 var currentsubj=0;
-for(i=0;i<50;i++){ans[0][i]=0;ans[1][i]=0;}
-//for(i=0;i<50;i++){cans[0][i]=1;cans[1][i]=1;}
+
+
 cans[0][0]=3;
 cans[0][1]=2;
 cans[0][2]=2;
