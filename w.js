@@ -16,10 +16,14 @@ q[0][2]="A กับ B วิ่งออกกำลังกายจากจ
 var dreason= Array(2);
 dreason[0]=new Array(50);
 dreason[1]=new Array(50);
+
 var choi=new Array(2);
 choi[0]=new Array(50);
 choi[1]=new Array(50);
-
+for(i=1;i<=50;i++){
+choi[0][i-1]=new Array(4);
+choi[1][i-1]=new Array(4); 
+}
 choi[0][0][0]="Phloem";
 choi[0][0][1]="Epidermis";
 choi[0][0][2]="Xylem";
@@ -203,6 +207,3 @@ var x = setInterval(function() {
 window.onbeforeunload = function() {
   return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
 };
-
-
-              
