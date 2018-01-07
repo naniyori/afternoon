@@ -303,10 +303,10 @@ choi[1][48][1]=" b. tarnish";
 choi[1][48][2]=" c. deport";
 choi[1][48][3]=" d. exile";
 q[1][49]="Choose the best answer.<br>50. Some medicines cause drowsiness and should not be used by people who operate machinery.";
-choi[1][49][0]="a. sleepiness";
-choi[1][49][1]="b. drunkenness";
-choi[1][49][2]="c. nervousness";
-choi[1][49][3]="d. sadness";
+choi[1][49][0]=" a. sleepiness";
+choi[1][49][1]=" b. drunkenness";
+choi[1][49][2]=" c. nervousness";
+choi[1][49][3]=" d. sadness";
 
 
 
