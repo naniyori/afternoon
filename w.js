@@ -55,177 +55,8 @@ cans[0][0]=3;
 cans[0][1]=2;
 cans[0][2]=2;
 
-
-
-
-
-
-
-
-
-loadd();
-function Close(){
-
-document.getElementById("scorepanel").style.display = "none";
-  
-}
-
-
-function check(x){
-  
-  var ch=0;
-  for(i=0;i<50;i++){if(ans[0][i]==0||ans[1][i]==0)ch=1;}
-//if(ch==1&&x==0)alert("ยังตอบคำถามไม่ครบ");
-  //else{
-    var score1=0,score2=0;
-    for(i=0;i<50;i++){if(ans[0][i]==cans[0][i])score1++;
-                         if(ans[1][i]==cans[1][i])score2++;}
-    document.getElementById("scoredisp").innerHTML="วิทยาศาสตร์ "+score1+"/50<br>ภาษาอังกฤษ "+score2+"/50";
-  
-  document.getElementById("scorepanel").style.display = "block";
-  document.getElementById("time").style.display = "none";
-  document.getElementById("sent").style.display = "none";
-    document.getElementById("choice").style.display = "none";
-   document.getElementById("reason").style.display = "block";
-  checked=1;
-  cno(1);
-  //}
-  
-}
-function choose(x){
-ans[currentsubj][currentno-1]=x;
-}
-function next(){
-cno(currentno+1);
-}
-function prev(){
-  cno(currentno-1);
-}
-function cno(x){
-  if(x==1)document.getElementById("prevbtn").style.visibility="hidden";
- else document.getElementById("prevbtn").style.visibility="visible";
-  if(x==50)document.getElementById("nextbtn").style.visibility="hidden";
- else document.getElementById("nextbtn").style.visibility="visible";
-  currentno=x;
-  for(j=1;j<=4;j++)document.getElementById("cbt"+j).checked=false;
-  if(ans[currentsubj][x-1]>0){document.getElementById("cbt"+ans[currentsubj][x-1]).checked=true;}
-  csubj(currentsubj,0); document.getElementById("no"+x).style.backgroundColor = "#ffaac2";
-  if(ans[currentsubj][currentno-1]!=cans[currentsubj][currentno-1]&&checked==1){
-    document.getElementById("no"+x).style.backgroundColor = "#ff72aa";
-    document.getElementById("yourans").style.display="block";
-    if(ans[currentsubj][currentno-1]==0)document.getElementById("yourans").innerHTML="<คุณไม่ได้ตอบคำถามนี้>";
-    else document.getElementById("yourans").innerHTML="<คำตอบของคุณคือ "+choi[currentsubj][x-1][ans[currentsubj][x-1]-1]+">";
-
-  }
-  else if(checked==1){document.getElementById("yourans").style.display="none";
-       document.getElementById("no"+x).style.backgroundColor = "#82ff8c";
-       }
-    document.getElementById("reason").innerHTML="คำตอบที่ถูกคือ "+choi[currentsubj][x-1][cans[currentsubj][x-1]-1]+"<br>"+dreason[currentsubj][x-1];
-    document.getElementById("question").innerHTML=q[currentsubj][x-1];
-    document.getElementById("c1").innerHTML=choi[currentsubj][x-1][0];
-   document.getElementById("c2").innerHTML=choi[currentsubj][x-1][1];
-  document.getElementById("c3").innerHTML=choi[currentsubj][x-1][2];
-  document.getElementById("c4").innerHTML=choi[currentsubj][x-1][3];
-  
-}
-
-
-function csubj(x,y){
-  currentsubj =x;
-    var div = document.getElementById("no");
-    while(div.firstChild)
-    div.removeChild(div.firstChild);
-  document.getElementById("sbtn0").style.fontWeight="normal";
-
-  
-  
- document.getElementById("sbtn1").style.fontWeight="normal";
-  document.getElementById("sbtn0").style.textDecoration= "none";
-  document.getElementById("sbtn1").style.textDecoration= "none";document.getElementById("sbtn"+currentsubj).style.fontWeight="bold";
-document.getElementById("sbtn"+currentsubj).style.textDecoration= "underline"; 
-    for(i=1;i<=50;i++){    
-      var btn = document.createElement("BUTTON");
-    var t = document.createTextNode(String(i));      
-    btn.appendChild(t);
-    btn.style.width="4%";
-    btn.style.backgroundColor="rgba(255, 255, 255, 0.8)";
-      if(ans[currentsubj][i-1]!=0&&checked==0) btn.style.backgroundColor="#00d839";
-      if(checked==1){
-        if(ans[currentsubj][i-1]==cans[currentsubj][i-1]){btn.style.backgroundColor="#00d839";}
-        else{btn.style.backgroundColor="#f44289";}
-      }
-    btn.style.borderColor="Transparent";
-    btn.id="no"+i;
-   btn.onclick =
-    (function() {
-      var currentI = i;
-      return function() { 
-          cno(currentI);
-      }
-   })();
-    document.getElementById("no").appendChild(btn);
-  }
- if(y==1)cno(1);
-}
-
-function loadd(){
-  
-  csubj(0,1);
-var countDownDate = new Date().getTime();
-countDownDate+=(2.5*60*60*1000);
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("time").innerHTML =  hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    alert("หมดเวลาทำข้อสอบแล้ว");
-    check(1);
-    //document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-/**
-    * Disable right-click of mouse, F12 key, and save key combinations on page
-    * By Arthur Gareginyan (arthurgareginyan@gmail.com)
-    * For full source code, visit http://www.mycyberuniverse.com
-    */
-  
-}
-
-
-//โจทย์วิทย์ q[0][i] : 0<=i<=49
-
-
-
-//ช้อยส์วิทย์ choi[0][i][j] : 0<=i<=49 , 0<=j<=3
-
-
-//คำตอบวิทย์ cans[0][i] : 0<=i<=49
-
-
-
-window.onbeforeunload = function() {
-  return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
-};
-
-
-//โจทย์อิ้งปาไป 300 กว่า บรรทัด อื้มมมมม
+//โจทย์อิ้งปาไป 300 กว่า บรรทัด อื้มมมมม 
+//เอาไว้ข้างล่างละบัค ย้ายมาข้างบนก้ด้ายย
 q[1][0]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>1. From the information given in the passage, we know that Marie Gilles_________.";
 choi[1][0][0]="            a. knew the owner of the gallery";
 choi[1][0][1]="            b. had been married";
@@ -576,4 +407,174 @@ dreason[1][47]="disruption                 n. ทำให้ยุ่งยา�
 cans[1][48]=1;
 dreason[1][48]="tarnish                       v. ทำให้ปนเปื้อน<br>                     a. banish                               v. เนรเทศ<br>                     c. deport                               v. เนรเทศ<br>                     d. exile                                  v. เนรเทศ";
 cans[1][49]=0;
-dreason[1][49]="sleepiness                 n. ความง่วงเหงาหาวนอน<br>b. drunkenness                   n. ความมึนเมา<br> c. nervousness                    n. ความประหม่า<br>d. sadness                            n. ความโศกเศร้า";
+dreason[1][49]="sleepiness                 n. ความง่วงเหงาหาวนอน<br>b. drunkenness                   n. ความมึนเมา<br> c. nervousness 
+
+
+
+
+
+
+
+loadd();
+function Close(){
+
+document.getElementById("scorepanel").style.display = "none";
+  
+}
+
+
+function check(x){
+  
+  var ch=0;
+  for(i=0;i<50;i++){if(ans[0][i]==0||ans[1][i]==0)ch=1;}
+//if(ch==1&&x==0)alert("ยังตอบคำถามไม่ครบ");
+  //else{
+    var score1=0,score2=0;
+    for(i=0;i<50;i++){if(ans[0][i]==cans[0][i])score1++;
+                         if(ans[1][i]==cans[1][i])score2++;}
+    document.getElementById("scoredisp").innerHTML="วิทยาศาสตร์ "+score1+"/50<br>ภาษาอังกฤษ "+score2+"/50";
+  
+  document.getElementById("scorepanel").style.display = "block";
+  document.getElementById("time").style.display = "none";
+  document.getElementById("sent").style.display = "none";
+    document.getElementById("choice").style.display = "none";
+   document.getElementById("reason").style.display = "block";
+  checked=1;
+  cno(1);
+  //}
+  
+}
+function choose(x){
+ans[currentsubj][currentno-1]=x;
+}
+function next(){
+cno(currentno+1);
+}
+function prev(){
+  cno(currentno-1);
+}
+function cno(x){
+  if(x==1)document.getElementById("prevbtn").style.visibility="hidden";
+ else document.getElementById("prevbtn").style.visibility="visible";
+  if(x==50)document.getElementById("nextbtn").style.visibility="hidden";
+ else document.getElementById("nextbtn").style.visibility="visible";
+  currentno=x;
+  for(j=1;j<=4;j++)document.getElementById("cbt"+j).checked=false;
+  if(ans[currentsubj][x-1]>0){document.getElementById("cbt"+ans[currentsubj][x-1]).checked=true;}
+  csubj(currentsubj,0); document.getElementById("no"+x).style.backgroundColor = "#ffaac2";
+  if(ans[currentsubj][currentno-1]!=cans[currentsubj][currentno-1]&&checked==1){
+    document.getElementById("no"+x).style.backgroundColor = "#ff72aa";
+    document.getElementById("yourans").style.display="block";
+    if(ans[currentsubj][currentno-1]==0)document.getElementById("yourans").innerHTML="<คุณไม่ได้ตอบคำถามนี้>";
+    else document.getElementById("yourans").innerHTML="<คำตอบของคุณคือ "+choi[currentsubj][x-1][ans[currentsubj][x-1]-1]+">";
+
+  }
+  else if(checked==1){document.getElementById("yourans").style.display="none";
+       document.getElementById("no"+x).style.backgroundColor = "#82ff8c";
+       }
+    document.getElementById("reason").innerHTML="คำตอบที่ถูกคือ "+choi[currentsubj][x-1][cans[currentsubj][x-1]-1]+"<br>"+dreason[currentsubj][x-1];
+    document.getElementById("question").innerHTML=q[currentsubj][x-1];
+    document.getElementById("c1").innerHTML=choi[currentsubj][x-1][0];
+   document.getElementById("c2").innerHTML=choi[currentsubj][x-1][1];
+  document.getElementById("c3").innerHTML=choi[currentsubj][x-1][2];
+  document.getElementById("c4").innerHTML=choi[currentsubj][x-1][3];
+  
+}
+
+
+function csubj(x,y){
+  currentsubj =x;
+    var div = document.getElementById("no");
+    while(div.firstChild)
+    div.removeChild(div.firstChild);
+  document.getElementById("sbtn0").style.fontWeight="normal";
+
+  
+  
+ document.getElementById("sbtn1").style.fontWeight="normal";
+  document.getElementById("sbtn0").style.textDecoration= "none";
+  document.getElementById("sbtn1").style.textDecoration= "none";document.getElementById("sbtn"+currentsubj).style.fontWeight="bold";
+document.getElementById("sbtn"+currentsubj).style.textDecoration= "underline"; 
+    for(i=1;i<=50;i++){    
+      var btn = document.createElement("BUTTON");
+    var t = document.createTextNode(String(i));      
+    btn.appendChild(t);
+    btn.style.width="4%";
+    btn.style.backgroundColor="rgba(255, 255, 255, 0.8)";
+      if(ans[currentsubj][i-1]!=0&&checked==0) btn.style.backgroundColor="#00d839";
+      if(checked==1){
+        if(ans[currentsubj][i-1]==cans[currentsubj][i-1]){btn.style.backgroundColor="#00d839";}
+        else{btn.style.backgroundColor="#f44289";}
+      }
+    btn.style.borderColor="Transparent";
+    btn.id="no"+i;
+   btn.onclick =
+    (function() {
+      var currentI = i;
+      return function() { 
+          cno(currentI);
+      }
+   })();
+    document.getElementById("no").appendChild(btn);
+  }
+ if(y==1)cno(1);
+}
+
+function loadd(){
+  
+  csubj(0,1);
+var countDownDate = new Date().getTime();
+countDownDate+=(2.5*60*60*1000);
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("time").innerHTML =  hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    alert("หมดเวลาทำข้อสอบแล้ว");
+    check(1);
+    //document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+/**
+    * Disable right-click of mouse, F12 key, and save key combinations on page
+    * By Arthur Gareginyan (arthurgareginyan@gmail.com)
+    * For full source code, visit http://www.mycyberuniverse.com
+    */
+  
+}
+
+
+//โจทย์วิทย์ q[0][i] : 0<=i<=49
+
+
+
+//ช้อยส์วิทย์ choi[0][i][j] : 0<=i<=49 , 0<=j<=3
+
+
+//คำตอบวิทย์ cans[0][i] : 0<=i<=49
+
+
+
+window.onbeforeunload = function() {
+  return "ระบบอาจไม่ได้บันทึกการเปลี่ยนแปลงของคุณ";
+};
+
+
+                   n. ความประหม่า<br>d. sadness                            n. ความโศกเศร้า";
