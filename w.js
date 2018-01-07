@@ -232,6 +232,26 @@ choi[1][34][0]=" a.";
 choi[1][34][1]=" b.";
 choi[1][34][2]=" c.";
 choi[1][34][3]=" d.";
+q[1][35]="Read the conversation and choose the best answer. <br>Poon: I’ve heard you’re moving to California.<br>Bloom: Yes, I’ve got an offer in upstate California. <br>Poon: Oh, that’s great! __36__ . <br>Bloom: Me, too. __37__ . <br>Poon :  Yeah. Don’t forget to __38__ when you settle down. <br>Bloom: Trust me. I won’t.  __39__ . <br>Poon : Do you have my address? <br>Bloom : Well, I have your e-mail address. <br>Poon : All right! I look forward to hearing from you soon. Good luck! <br>";
+choi[1][35][0]="  a. And you’re going to enjoy it        ";
+choi[1][35][1]="     b. But I’m so surprised   ";
+choi[1][35][2]="       c. And I’m so happy for you             ";
+choi[1][35][3]="     d. But I’m going to miss you";
+q[1][36]=" Read the conversation and choose the best answer. <br>Poon: I’ve heard you’re moving to California.<br>Bloom: Yes, I’ve got an offer in upstate California. <br>Poon: Oh, that’s great! __36__ . <br>Bloom: Me, too. __37__ . <br>Poon :  Yeah. Don’t forget to __38__ when you settle down. <br>Bloom: Trust me. I won’t.  __39__ . <br>Poon : Do you have my address? <br>Bloom : Well, I have your e-mail address. <br>Poon : All right! I look forward to hearing from you soon. Good luck! <br>";
+choi[1][36][0]="  a. Let’s call it a day                       ";
+choi[1][36][1]="          b. Let’s look around";
+choi[1][36][2]="         c. Let’s keep up                               ";
+choi[1][36][3]="       d. Let’s keep in touch";
+q[1][37]="  Read the conversation and choose the best answer. <br>Poon: I’ve heard you’re moving to California.<br>Bloom: Yes, I’ve got an offer in upstate California. <br>Poon: Oh, that’s great! __36__ . <br>Bloom: Me, too. __37__ . <br>Poon :  Yeah. Don’t forget to __38__ when you settle down. <br>Bloom: Trust me. I won’t.  __39__ . <br>Poon : Do you have my address? <br>Bloom : Well, I have your e-mail address. <br>Poon : All right! I look forward to hearing from you soon. Good luck! <br>";
+choi[1][37][0]=" a. look it up                                 ";
+choi[1][37][1]="             b. give me a hand";
+choi[1][37][2]="         c. drop me a line                        ";
+choi[1][37][3]="            d. write it down";
+q[1][38]="Read the conversation and choose the best answer. <br>Poon: I’ve heard you’re moving to California.<br>Bloom: Yes, I’ve got an offer in upstate California. <br>Poon: Oh, that’s great! __36__ . <br>Bloom: Me, too. __37__ . <br>Poon :  Yeah. Don’t forget to __38__ when you settle down. <br>Bloom: Trust me. I won’t.  __39__ . <br>Poon : Do you have my address? <br>Bloom : Well, I have your e-mail address. <br>Poon : All right! I look forward to hearing from you soon. Good luck! <br>";
+choi[1][38][0]="   a. I’ll help you                            ";
+choi[1][38][1]="              b. I’ll keep you a posted";
+choi[1][38][2]="        c. Otherwise, I will forget             ";
+choi[1][38][3]="         d. Otherwise, you’ll forget";
 
 
 
