@@ -12,6 +12,7 @@ for(i=1;i<=50;i++){
 q[0][i-1]="โจทย์วิทย์ข้อที่"+i;
 q[1][i-1]="โจทย์อิ้งข้อที่"+i;
 }
+q[0][i-1]="ข้อใดถูกต้อง"
 var dreason= Array(2);
 dreason[0]=new Array(50);
 dreason[1]=new Array(50);
