@@ -19,8 +19,8 @@ var dreason= Array(2);
 dreason[0]=new Array(50);
 dreason[1]=new Array(50);
 for(i=1;i<=50;i++){
-dreason[0][i-1]="เนืีองจากวิทย์"+i;
-  dreason[1][i-1]="เนืีองจากอิ้ง"+i;
+dreason[0][i-1]="เนื่องจากวิทย์"+i;
+  dreason[1][i-1]="เนื่องจากอิ้ง"+i;
 }
 var choi=new Array(2);
 choi[0]=new Array(50);
