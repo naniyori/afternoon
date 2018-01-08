@@ -110,6 +110,17 @@ body {
   text-align : center;  
 
 }
+image{
+
+  max-width:230px;
+  max-height:95px;
+
+}
+.pic{
+  width :auto;
+  height : auto;
+  
+}
 
 @media screen and (max-width : 500px ){
 .inputa{
