@@ -1,6 +1,7 @@
 //โจทย์อิ้งปาไป 300 กว่า บรรทัด อื้มมมมม 
 //เอาไว้ข้างล่างละบัค ย้ายมาข้างบนก้ด้ายย
 //โอเค เรียกจากอีกไฟล์ได้ ไม่รกละ
+//อืมม เขาไม่ให้โจทย์อ่ะ ทำใหม่ก้ด้าย
 q[1][0]="Read this passage and answer the following questions.<br>&nbsp; &nbsp; &nbsp; &nbsp;Two men were arrested by the police after they had sold a stolen painting to an art gallery in Guildford. The owner of the gallery claimed that he had bought the painting in good faith, unaware that it had been stolen. The painting, a portrait of a young woman in a wide brimmed straw hat sitting under a tree, was owned by Marie Gilles, aged 84. She claimed that the painting had been given to one of her ancestors by the artist. She had owned it since 1950 when it was given to her by an aunt as a wedding present. The painting had been stolen from her house two weeks previous to the arrest of the two men.<br>1. From the information given in the passage, we know that Marie Gilles_________.";
 choi[1][0][0]="            a. knew the owner of the gallery";
 choi[1][0][1]="            b. had been married";
