@@ -116,12 +116,11 @@ image{
   max-height:95px;
 
 }
-.pic{
-  width :auto;
-  height : auto;
-  
-}
+img{
+    max-width: 100%;
+    height: auto;
 
+}
 @media screen and (max-width : 500px ){
 .inputa{
     width: 70px;
