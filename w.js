@@ -9,6 +9,17 @@ var anseng = [];
 var q =new Array(2);
 q[0]=new Array(50);
 q[1]=new Array(50);
+var qpic =new Array(3);
+for(i=0;i<3;i++)qpic[i]=new Array(50);
+for(i=0;i<3;i++){
+  for(j=0;j<50;j++){qpic[i][j]="NULL";}
+}
+var apic =new Array(3);
+for(i=0;i<3;i++)apic[i]=new Array(50);
+for(i=0;i<3;i++){
+  for(j=0;j<50;j++){apic[i][j]="NULL";}
+}
+qpic[0][0]="";
 
 /*q[0][0]="เนื้อเยื่อของพืชในข้อใดเป็นเซลล์ที่ตายแล้ว";
 q[0][1]="สารในข้อใดที่โดยทั่วไปจะไม่พบในผนังเซลล์ของพืช <br> ก) Pectin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ข) Suberin <br> ค) Cutin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ง) Lignin";
@@ -106,7 +117,21 @@ function cno(x){
        document.getElementById("no"+x).style.backgroundColor = "#82ff8c";
        }
     document.getElementById("reason").innerHTML="คำตอบที่ถูกคือ "+choi[currentsubj][x-1][cans[currentsubj][x-1]-1]+"<br>"+dreason[currentsubj][x-1];
-    document.getElementById("question").innerHTML=q[currentsubj][x-1];
+   
+  
+    if(qpic[currentsubj][x-1]!="NULL")
+  { document.getElementById("questionpic").style.display="block"; 
+  }
+  else document.getElementById("questionpic").style.display="none";
+  
+    if(apic[currentsubj][x-1]!="NULL"&&checked==1)
+  { document.getElementById("anspic").style.display="block"; 
+  }
+  else document.getElementById("anspic").style.display="none";
+  
+  
+  
+  document.getElementById("question").innerHTML=q[currentsubj][x-1];
     document.getElementById("c1").innerHTML=choi[currentsubj][x-1][0];
    document.getElementById("c2").innerHTML=choi[currentsubj][x-1][1];
   document.getElementById("c3").innerHTML=choi[currentsubj][x-1][2];
