@@ -19,7 +19,6 @@ for(i=0;i<3;i++)apic[i]=new Array(50);
 for(i=0;i<3;i++){
   for(j=0;j<50;j++){apic[i][j]="NULL";}
 }
-qpic[0][0]="";
 
 /*q[0][0]="เนื้อเยื่อของพืชในข้อใดเป็นเซลล์ที่ตายแล้ว";
 q[0][1]="สารในข้อใดที่โดยทั่วไปจะไม่พบในผนังเซลล์ของพืช <br> ก) Pectin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ข) Suberin <br> ค) Cutin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ง) Lignin";
@@ -119,13 +118,15 @@ function cno(x){
     document.getElementById("reason").innerHTML="คำตอบที่ถูกคือ "+choi[currentsubj][x-1][cans[currentsubj][x-1]-1]+"<br>"+dreason[currentsubj][x-1];
    
   
-    if(qpic[currentsubj][x-1]!="NULL")
-  { document.getElementById("questionpic").style.display="block"; 
+  if(qpic[currentsubj][x-1]!="NULL")
+  { document.getElementById("questionpic").src=qpic[currentsubj][x-1]; 
+   document.getElementById("questionpic").style.display="block"; 
   }
   else document.getElementById("questionpic").style.display="none";
   
     if(apic[currentsubj][x-1]!="NULL"&&checked==1)
   { document.getElementById("anspic").style.display="block"; 
+   document.getElementById("anspic").src=apic[currentsubj][x-1]; 
   }
   else document.getElementById("anspic").style.display="none";
   
