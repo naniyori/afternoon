@@ -52,9 +52,7 @@ var currentno=1;
 var currentsubj=0;
 
 
-cans[0][0]=3;
-cans[0][1]=2;
-cans[0][2]=2;
+
 
 
 
