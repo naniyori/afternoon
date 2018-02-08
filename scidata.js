@@ -178,8 +178,8 @@ choi[0][34][3]=" 24 วัน";
 
 
 
-
-cans[0][0]="50 cm<sup>3</sup> = 10 g.<br>100 cm<sup>3</sup> = 20 g.";
+cans[0][0]=1;
+dreason[0][0]="50 cm<sup>3</sup> = 10 g.<br>100 cm<sup>3</sup> = 20 g.";
 cans[0][1]=1;
 dreason[0][1]="เติมน้ำ = 0.155 x 1000 = 155 cm<sup>3</sup><br>สารละลาย 200 cm3 = 45 cm<sup>3</sup><br>  100 cm<sup>3</sup> = 22.5 cm<sup>3</sup>";
 cans[0][2]=2;
